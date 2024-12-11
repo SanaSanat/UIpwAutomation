@@ -3,10 +3,11 @@ import {DatePicker} from '../../page_object/LambdaTest/DatePicker'
 
 it.describe('DATE PICKER PAGE',()=>{
 
-    it('should have a header', async ({page})=>{
+    it('set random date for "From" input field', async ({page})=>{
         const datePicker = new DatePicker(page)
         //await page.goto(datePicker.url)
         await datePicker.open()
         await datePicker.verifyHeader()
+        await datePicker.dateFromToday()
     } )
 })
